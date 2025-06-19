@@ -6,7 +6,7 @@ from datetime import datetime
 from zoneinfo import ZoneInfo  # Python 3.9+
 
 # CONFIGURACIÓN
-INTERVALO_HORAS = 1  
+INTERVALO_HORAS = 24  
 SEGUNDOS_ENTRE_EJECUCIONES = INTERVALO_HORAS * 3600
 
 API_KEY = "NNSXS.5FX4DV4XBOE4QGWFZUBONX77CKWY6SSUK6QPO5I.X2XCCHND5GNAOXOIQCZHHIK3VN5BCCOWHRPYP6FVGZ4Z5MOTDGCQ"
@@ -17,7 +17,7 @@ headers = {
     "Accept": "text/event-stream"
 }
 params = {
-    "last": "1h"
+    "last": "24h"
 }
 
 def ejecutar_descarga_y_guardado():

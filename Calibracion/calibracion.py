@@ -2,7 +2,7 @@ import serial
 import time
 from openpyxl import Workbook
 
-PORT = 'COM16'               # Cambia según tu sistema (COMx o /dev/ttyUSBx)
+PORT = 'COM16'        
 BAUD_RATE = 9600
 OUTPUT_FILE = 'datos_sensor_1.xlsx'
 

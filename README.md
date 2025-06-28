@@ -1,4 +1,4 @@
-# 🌫️ ThermalInversion – Sistema IoT para Monitorización Ambiental
+# ThermalInversion – Sistema IoT para Monitorización Ambiental
 
 Este proyecto consiste en el desarrollo de un sistema de sensores autónomo basado en **LoRaWAN**, diseñado para monitorizar variables ambientales que afectan a la calidad del aire. Está orientado a la detección de patrones asociados a fenómenos atmosféricos persistentes mediante la recopilación de datos en tiempo real y su transmisión a plataformas de análisis.
 
@@ -23,13 +23,13 @@ Se trata de un proyecto desarrollado como Trabajo Fin de Grado en la Universidad
 ## 📂 Estructura del firmware
 
 /
-├── thermal_inversion.ino       # Lógica principal
-├── configuration.h             # Pines, intervalos, ajustes LoRa
-├── credentials.h               # Claves LoRaWAN (DevEUI, AppEUI, AppKey)
-├── sensor.{h,ino}              # Lectura de sensores BME280 y SDS011
-├── lvlbat.{h,ino}              # Medición de batería
-├── sleep.{h,ino}               # Gestión del deep sleep
-└── ttn.{h,ino}                 # Comunicación LoRa con TTN (LMIC)
+- thermal_inversion.ino       # Lógica principal
+- configuration.h             # Pines, intervalos, ajustes LoRa
+- credentials.h               # Claves LoRaWAN (DevEUI, AppEUI, AppKey)
+- sensor.{h,ino}              # Lectura de sensores BME280 y SDS011
+- lvlbat.{h,ino}              # Medición de batería
+- sleep.{h,ino}               # Gestión del deep sleep
+- ttn.{h,ino}                 # Comunicación LoRa con TTN (LMIC)
 
 ## 🚀 Cómo empezar
 

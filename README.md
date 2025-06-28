@@ -22,7 +22,6 @@ Se trata de un proyecto desarrollado como Trabajo Fin de Grado en la Universidad
 
 ## 📂 Estructura del firmware
 
-/
 - thermal_inversion.ino       # Lógica principal
 - configuration.h             # Pines, intervalos, ajustes LoRa
 - credentials.h               # Claves LoRaWAN (DevEUI, AppEUI, AppKey)

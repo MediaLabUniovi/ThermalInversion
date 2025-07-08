@@ -20,6 +20,13 @@ params = {
     "last": "24h"
 }
 
+# Mapeo de nombres descriptivos
+NOMBRES_DISPOSITIVOS = {
+    "ti01": "Departamental Este",
+    "ti02": "MediaLab",
+    "ti03": "Deva"
+}
+
 def ejecutar_descarga_y_guardado():
     response = requests.get(url, headers=headers, params=params, stream=True)
 
@@ -49,8 +56,11 @@ def ejecutar_descarga_y_guardado():
                     except Exception:
                         pass
 
+                    device_id = metadata.get("device_id", "")
+                    nombre_dispositivo = NOMBRES_DISPOSITIVOS.get(device_id, device_id)
+
                     record = {
-                        "device_id": metadata.get("device_id", ""),
+                        "device_id": nombre_dispositivo,
                         "Fecha": fecha,
                         "Hora": hora,
                         "Batería [%]": payload.get("battery"),
@@ -82,7 +92,8 @@ def ejecutar_descarga_y_guardado():
             for device_id, group in grouped:
                 group_sorted = group.sort_values(by=["Fecha", "Hora"])
                 group_sorted.drop(columns=["device_id"], inplace=True)
-                group_sorted.to_excel(writer, sheet_name=device_id[:31], index=False)
+                nombre_hoja = device_id[:31]  # Ya contiene el nombre descriptivo
+                group_sorted.to_excel(writer, sheet_name=nombre_hoja, index=False)
 
         print(f"✅ Datos guardados en '{nombre_archivo}'")
     else:

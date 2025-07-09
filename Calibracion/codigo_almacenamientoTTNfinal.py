@@ -22,9 +22,9 @@ params = {
 
 # Mapeo de nombres descriptivos
 NOMBRES_DISPOSITIVOS = {
-    "ti01": "Departamental Este",
+    "ti01": "Deva",
     "ti02": "MediaLab",
-    "ti03": "Deva"
+    "ti03": "Departamental Este"
 }
 
 def ejecutar_descarga_y_guardado():
